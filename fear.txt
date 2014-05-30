@@ -1,0 +1,20 @@
+"fear"
+{
+	"base"		"base"
+	"title"		"fear"
+	"maps"		"^ex_"
+	"menusystem"	"1"
+	"workshopid"	""
+	
+	"settings"
+	{
+		1
+		{
+			"name"		"ex_test"
+			"text"		"Test"
+			"help"		"Testing schnizzle"
+			"type"		"numeric"
+			"default"	"1"
+		}
+	}
+}
