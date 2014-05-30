@@ -129,8 +129,8 @@ end
 round = {}
 
 -- Variables
-round.Break	= 15	-- 30 second breaks
-round.Time	= 300	-- 5 minute rounds
+round.Break	= 15	-- 15 second breaks
+round.Time	= 600	-- 10 minute rounds
 
 -- Read Variables
 round.TimeLeft = -1
@@ -150,7 +150,7 @@ function round.Begin()
 		v:Spawn()
 		v:Freeze(false)
 	end
-	round.Broadcast("Round starting! Round ends in " .. round.Time .. " seconds!")
+	round.Broadcast("Round starting! Round ends in " .. round.Time/60 .. " minutes!")
 	round.TimeLeft = round.Time
 end
 
@@ -162,7 +162,7 @@ function round.End(winloose)
 		v:Freeze(true)
 	end
 	if(winloose == 1) then
-	round.Broadcast("The victims have lost. Next round in".. round.Break .." seconds!")
+	round.Broadcast("The victims have lost. Next round in: ".. round.Break .." seconds!")
 	end
 	if(winloose == 2)then
 	round.Broadcast("The victims defeated the evil within. Brace for harder scares in: ".. round.Break .." seconds!")
